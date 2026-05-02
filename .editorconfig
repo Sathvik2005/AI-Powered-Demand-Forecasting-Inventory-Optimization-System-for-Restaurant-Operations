@@ -1,0 +1,65 @@
+# EditorConfig helps maintain consistent coding styles
+
+root = true
+
+# ===========================
+# All Files
+# ===========================
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+
+# ===========================
+# Python Files (.py)
+# ===========================
+[*.py]
+indent_size = 4
+max_line_length = 88  # Black formatter standard
+
+# ===========================
+# Jupyter Notebooks (.ipynb)
+# ===========================
+[*.ipynb]
+indent_size = 4
+indent_style = space
+
+# ===========================
+# Markdown Files (.md)
+# ===========================
+[*.md]
+# Markdown: preserve trailing whitespace for line breaks
+trim_trailing_whitespace = false
+indent_size = 2
+
+# ===========================
+# YAML Files (.yml, .yaml)
+# ===========================
+[*.{yml,yaml}]
+indent_size = 2
+
+# ===========================
+# JSON Files (.json)
+# ===========================
+[*.json]
+indent_size = 2
+
+# ===========================
+# TOML Files (.toml)
+# ===========================
+[*.toml]
+indent_size = 2
+
+# ===========================
+# Configuration Files
+# ===========================
+[requirements.txt]
+indent_size = 4
+
+[.gitignore]
+indent_size = 4
+
+[.env*]
+indent_size = 4
