@@ -281,6 +281,8 @@ def train_models(train_df: pd.DataFrame, test_df: pd.DataFrame) -> dict[str, Any
         'actual': y_test.values,
         'predicted': best_predictions,
     })
+    if 'date' not in forecast_frame.columns:
+        forecast_frame['date'] = pd.to_datetime(test_df['date']).dt.strftime('%Y-%m-%d').tolist()
     forecast_frame['error'] = forecast_frame['actual'] - forecast_frame['predicted']
     forecast_frame['abs_error'] = forecast_frame['error'].abs()
 
@@ -342,8 +344,9 @@ def build_dashboard_payload() -> dict[str, Any]:
     # Provide mock data if artifacts are missing
     if forecast_df.empty:
         # Generate mock forecast data
-        dates = pd.date_range('2024-01-01', periods=180, freq='D')
+        dates = pd.to_datetime(pd.date_range('2024-01-01', periods=180, freq='D'))
         forecast_df = pd.DataFrame({
+            'date': dates,
             'actual': np.random.randint(50, 500, 180),
             'predicted': np.random.randint(50, 500, 180),
         })
