@@ -351,6 +351,10 @@ def build_dashboard_payload() -> dict[str, Any]:
             'predicted': np.random.randint(50, 500, 180),
         })
     
+    # Ensure 'date' column is in the right format
+    if 'date' in forecast_df.columns:
+        forecast_df['date'] = pd.to_datetime(forecast_df['date']).dt.strftime('%Y-%m-%d')
+    
     if importance_df.empty:
         # Generate mock feature importance
         importance_df = pd.DataFrame({
