@@ -10,8 +10,8 @@ export function Settings() {
         <div className="aurora aurora-1" />
         <div className="aurora aurora-2" />
         <section className="hero">
-          <h1>⚙️ Settings & Configuration</h1>
-          <p className="error-banner">⚠️ Cannot connect to backend: {error}</p>
+          <h1>Settings & Configuration</h1>
+          <p className="error-banner">Error: Cannot connect to backend: {error}</p>
         </section>
       </motion.main>
     );
@@ -21,7 +21,7 @@ export function Settings() {
     return (
       <motion.main className="dashboard" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
         <div className="aurora aurora-1" />
-        <div className="loading-banner">📡 Loading settings...</div>
+        <div className="loading-banner">Loading settings...</div>
       </motion.main>
     );
   }
@@ -35,7 +35,7 @@ export function Settings() {
       <section className="hero">
         <div>
           <p className="eyebrow">Configuration & Environment</p>
-          <h1>⚙️ Settings & System Information</h1>
+          <h1>Settings & System Information</h1>
           <p className="hero-copy">Dataset, model, and API configuration details.</p>
         </div>
       </section>
@@ -234,21 +234,21 @@ export function Settings() {
           </div>
           <div className="security-checklist">
             <div className="check-item">
-              <span>✅</span>
+              <span>✓</span>
               <div>
                 <strong>No hardcoded credentials</strong>
                 <p>All sensitive data via environment variables (.env)</p>
               </div>
             </div>
             <div className="check-item">
-              <span>✅</span>
+              <span>✓</span>
               <div>
                 <strong>.gitignore protection</strong>
                 <p>*.csv, *.pkl, *.h5 excluded from version control</p>
               </div>
             </div>
             <div className="check-item">
-              <span>✅</span>
+              <span>✓</span>
               <div>
                 <strong>CORS configured</strong>
                 <p>Backend only accepts requests from localhost:5173</p>

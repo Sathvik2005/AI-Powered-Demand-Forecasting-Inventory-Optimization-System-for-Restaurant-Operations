@@ -247,8 +247,21 @@ git commit -m "report: generated business insights and recommendations"
 
 ---
 
+## 📞 Contact & Support
 
+For questions about this project:
+- Create an **Issue** in the GitHub repository
+- Email: your.email@company.com
+- Slack: #restaurant-ai-project
+
+---
+
+## 📜 License
+
+This project is part of an internship program at [Company Name]. All code and analysis are proprietary and confidential.
+
+---
 
 **Last Updated**: January 2024  
-**Project Owner**: [Sathvik],[Pratap]  
+**Project Owner**: [Name]  
 **Status**: 🟢 Active Development (Week 1 Complete)

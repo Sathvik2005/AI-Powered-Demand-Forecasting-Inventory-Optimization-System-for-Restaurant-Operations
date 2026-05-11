@@ -10,8 +10,8 @@ export function Insights() {
         <div className="aurora aurora-1" />
         <div className="aurora aurora-2" />
         <section className="hero">
-          <h1>💡 Business Insights</h1>
-          <p className="error-banner">⚠️ Cannot connect to backend: {error}</p>
+          <h1>Business Insights</h1>
+          <p className="error-banner">Error: Cannot connect to backend: {error}</p>
         </section>
       </motion.main>
     );
@@ -21,7 +21,7 @@ export function Insights() {
     return (
       <motion.main className="dashboard" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
         <div className="aurora aurora-1" />
-        <div className="loading-banner">📡 Loading insights...</div>
+        <div className="loading-banner">Loading insights...</div>
       </motion.main>
     );
   }
@@ -45,7 +45,7 @@ export function Insights() {
       <section className="hero">
         <div>
           <p className="eyebrow">Week 4: Business Translation</p>
-          <h1>💡 Business Insights & Recommendations</h1>
+          <h1>Business Insights & Recommendations</h1>
           <p className="hero-copy">Stakeholder-ready findings from model evaluation and feature analysis.</p>
         </div>
       </section>
@@ -169,28 +169,28 @@ export function Insights() {
           </div>
           <div className="recommendation-list">
             <div className="recommendation-item">
-              <div className="rec-title">📦 Inventory Management</div>
+              <div className="rec-title">Inventory Management</div>
               <p>
                 Use predicted demand to set minimum/maximum stock levels. Increase safety stock for weekends by{' '}
                 {Math.round(insights.weekend_uplift_pct ?? 10)}%.
               </p>
             </div>
             <div className="recommendation-item">
-              <div className="rec-title">👥 Staffing Planning</div>
+              <div className="rec-title">Staffing Planning</div>
               <p>
                 Align shift schedules with forecasted demand. Peak days (Day {insights.top_weekday}) need full team.
                 Off-peak days allow for cross-training or lighter shifts.
               </p>
             </div>
             <div className="recommendation-item">
-              <div className="rec-title">🎯 Marketing Campaigns</div>
+              <div className="rec-title">Marketing Campaigns</div>
               <p>
                 Target promotions on low-demand days (weekdays) to smooth demand curve. This reduces inventory costs
                 and improves unit economics.
               </p>
             </div>
             <div className="recommendation-item">
-              <div className="rec-title">⚠️ Risk Mitigation</div>
+              <div className="rec-title">Risk Mitigation</div>
               <p>
                 {insights.anomaly_days ?? 0} anomalies detected. Investigate root causes (holidays, supply issues,
                 competitor actions) and incorporate into forecast updates.

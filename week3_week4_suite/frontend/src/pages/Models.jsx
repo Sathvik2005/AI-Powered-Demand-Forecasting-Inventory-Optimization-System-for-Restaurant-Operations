@@ -11,8 +11,8 @@ export function Models() {
         <div className="aurora aurora-1" />
         <div className="aurora aurora-2" />
         <section className="hero">
-          <h1>🤖 Model Comparison</h1>
-          <p className="error-banner">⚠️ Cannot connect to backend: {error}</p>
+          <h1>Model Comparison</h1>
+          <p className="error-banner">Error: Cannot connect to backend: {error}</p>
         </section>
       </motion.main>
     );
@@ -22,7 +22,7 @@ export function Models() {
     return (
       <motion.main className="dashboard" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
         <div className="aurora aurora-1" />
-        <div className="loading-banner">📡 Loading model details...</div>
+        <div className="loading-banner">Loading model details...</div>
       </motion.main>
     );
   }
@@ -98,7 +98,7 @@ export function Models() {
                         </td>
                         <td>{row.mae.toLocaleString()}</td>
                         <td>{row.rmse.toLocaleString()}</td>
-                        <td>{row.model === summary.best_model_name ? '⭐ Production' : '—'}</td>
+                        <td>{row.model === summary.best_model_name ? 'PRODUCTION' : '—'}</td>
                       </tr>
                     ))}
                   </tbody>

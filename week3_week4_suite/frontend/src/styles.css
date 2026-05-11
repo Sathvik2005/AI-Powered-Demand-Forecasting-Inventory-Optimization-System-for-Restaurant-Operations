@@ -8,7 +8,7 @@
   --line: rgba(255, 255, 255, 0.08);
   --text: #edf2ff;
   --muted: #a6b4d6;
-  --accent: #78f0c4;
+  --accent: #78c8f0;
   --accent-2: #7aa7ff;
   --accent-3: #ffb86b;
   --shadow: 0 24px 70px rgba(0, 0, 0, 0.4);
@@ -395,6 +395,13 @@ body {
   background: var(--accent);
   color: var(--bg);
   border-color: var(--accent);
+}
+
+.nav-icon {
+  margin-right: 8px;
+  vertical-align: middle;
+  font-size: 1.2em;
+  display: inline-block;
 }
 
 /* ===== TABLE STYLES ===== */

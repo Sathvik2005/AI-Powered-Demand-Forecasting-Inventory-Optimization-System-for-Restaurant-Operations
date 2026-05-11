@@ -10,8 +10,8 @@ export function Forecast() {
         <div className="aurora aurora-1" />
         <div className="aurora aurora-2" />
         <section className="hero">
-          <h1>📈 Forecast Results</h1>
-          <p className="error-banner">⚠️ Cannot connect to backend: {error}</p>
+          <h1>Forecast Results</h1>
+          <p className="error-banner">Error: Cannot connect to backend: {error}</p>
         </section>
       </motion.main>
     );
@@ -21,7 +21,7 @@ export function Forecast() {
     return (
       <motion.main className="dashboard" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
         <div className="aurora aurora-1" />
-        <div className="loading-banner">📡 Loading forecast data...</div>
+        <div className="loading-banner">Loading forecast data...</div>
       </motion.main>
     );
   }
@@ -55,13 +55,13 @@ export function Forecast() {
       <section className="hero">
         <div>
           <p className="eyebrow">Week 4: Forecasting Results</p>
-          <h1>📈 Forecast Details</h1>
+          <h1>Forecast Details</h1>
           <p className="hero-copy">
             {forecast.length} test predictions with actual values. Real data from Kaggle Food Demand dataset.
           </p>
         </div>
         <button className="export-btn" onClick={downloadCSV}>
-          📥 Download CSV
+          Download CSV
         </button>
       </section>
 

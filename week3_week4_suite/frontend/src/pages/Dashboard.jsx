@@ -92,10 +92,10 @@ export function Dashboard() {
 
       {error && (
         <div className="error-banner">
-          ⚠️ Cannot connect to backend: {error}. Make sure Uvicorn is running on http://127.0.0.1:8000
+          Error: Cannot connect to backend: {error}. Make sure Uvicorn is running on http://127.0.0.1:8000
         </div>
       )}
-      {loading && <div className="loading-banner">📡 Fetching real data from backend...</div>}
+      {loading && <div className="loading-banner">Fetching real data from backend...</div>}
 
       {summary && (
         <>
@@ -261,7 +261,7 @@ export function Dashboard() {
         transition={{ delay: 0.3 }}
       >
         <div>
-          ✅ Week 3: Model selection + tuning with TimeSeriesSplit. ✅ Week 4: Evaluation + business reporting.
+          ✓ Week 3: Model selection + tuning with TimeSeriesSplit. ✓ Week 4: Evaluation + business reporting.
         </div>
       </motion.section>
     </motion.main>
